@@ -37,8 +37,10 @@ services:
     ports:
       - "8080:80"
     volumes:
-      - ./book/application:/var/www/htdocs
       - ./book/application:/var/www/html
+      - ./src/nginx.ini:/etc/nginx/conf.d/default.conf
+      - ./php-fpm.conf:/etc/php/7.4/fpm
+      - ./www.conf:/etc/php/7.4/fpm/pool.d
     privileged: true
     networks:
       - mynet
