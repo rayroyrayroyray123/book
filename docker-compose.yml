@@ -22,7 +22,7 @@ services:
       - myredis
     build: ./php
     volumes:
-      - ./src:/var/www/html
+      - ./book/application:/var/www/htdocs
     privileged: true
     ports:
       - "9000"
