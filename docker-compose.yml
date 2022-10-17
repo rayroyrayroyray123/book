@@ -14,6 +14,11 @@ services:
   myredis:
     image: redis:latest
     networks:
+      - mynet 
+
+  myCodeIgniter:
+    image: codeigniter/nginx-php-fpm
+    networks:
       - mynet
 
   myphp:
