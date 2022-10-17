@@ -23,6 +23,7 @@ services:
     build: ./php
     volumes:
       - ./book/application:/var/www/htdocs
+      - ./book/application:/var/www/html
     privileged: true
     ports:
       - "9000"
@@ -37,6 +38,7 @@ services:
       - "8080:80"
     volumes:
       - ./book/application:/var/www/htdocs
+      - ./book/application:/var/www/html
     privileged: true
     networks:
       - mynet
